@@ -18,28 +18,52 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bob-Ea-FUu">
-                                <rect key="frame" x="125" y="408.66666666666669" width="143" height="35"/>
+                                <rect key="frame" x="125" y="109" width="143" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Start Recording"/>
                                 <connections>
                                     <action selector="recordingPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fWY-yw-j3a"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Hga-Do-03F">
+                                <rect key="frame" x="0.0" y="208" width="393" height="610"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="0HL-X1-jaC">
+                                        <rect key="frame" x="0.0" y="55.333332061767578" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0HL-X1-jaC" id="fCI-FJ-8Cm">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="8kY-zo-GHC"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="eAN-5e-9mM"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Bob-Ea-FUu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0sh-Za-3an"/>
+                            <constraint firstItem="Bob-Ea-FUu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="0r3-yM-AOB"/>
+                            <constraint firstItem="Hga-Do-03F" firstAttribute="top" secondItem="Bob-Ea-FUu" secondAttribute="bottom" constant="64" id="GFC-MG-QVW"/>
+                            <constraint firstItem="Hga-Do-03F" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Y8k-aM-4ET"/>
                             <constraint firstItem="Bob-Ea-FUu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kUc-ba-Lm9"/>
+                            <constraint firstItem="Hga-Do-03F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sBa-Wc-2lx"/>
+                            <constraint firstItem="Hga-Do-03F" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="zcc-iF-yLQ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="buttonLabel" destination="Bob-Ea-FUu" id="rpC-cN-HEd"/>
+                        <outlet property="myTableView" destination="Hga-Do-03F" id="cEm-Af-HMs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="4"/>
+            <point key="canvasLocation" x="139.69465648854961" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
