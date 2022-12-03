@@ -41,9 +41,11 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     // MARK: FUNCTIONS
     
     func getDirectory() -> URL {
-        let paths = File
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         
-        return
+        let documentsDirectory = paths[0]
+        
+        return documentsDirectory
     }
     
     
